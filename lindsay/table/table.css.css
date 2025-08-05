@@ -1,0 +1,22 @@
+body{
+    background-color: cornflowerblue;
+}
+table{
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 10px; /* Optional for rounded corner */
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box box-shadow: width: 10px;
+
+}
+td, td {
+    border: 5px solid rgb(2, 13, 22);
+
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
