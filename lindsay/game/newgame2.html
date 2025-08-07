@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape the Box</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #game {
+      position: relative;
+      width: 400px;
+      height: 600px;
+      margin: 30px auto;
+      background: #222;
+      border: 3px solid white;
+      overflow: hidden;
+    }
+
+    #player {
+      width: 40px;
+      height: 40px;
+      background: #00ffcc;
+      position: absolute;
+      bottom: 20px;
+      left: 180px;
+      border-radius: 10px;
+    }
+
+    .wall {
+      width: 100px;
+      height: 20px;
+      background: crimson;
+      position: absolute;
+      top: -20px;
+    }
+
+    #gameover {
+      font-size: 30px;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏃 Escape the Box</h1>
+  <div id="game">
+    <div id="player"></div>
+  </div>
+  <div id="gameover">💀 Game Over! Refresh to try again.</div>
+
+  <script>
+    const game = document.getElementById('game');
+    const player = document.getElementById('player');
+    const gameoverText = document.getElementById('gameover');
+
+    let playerX = 180;
+    const moveSpeed = 20;
+    let isGameOver = false;
+
+    document.addEventListener('keydown', e => {
+      if (isGameOver) return;
+      if (e.key === 'ArrowLeft' || e.key === 'a') playerX -= moveSpeed;
+      if (e.key === 'ArrowRight' || e.key === 'd') playerX += moveSpeed;
+
+      // Keep player inside box
+      playerX = Math.max(0, Math.min(360, playerX));
+      player.style.left = playerX + 'px';
+    });
+
+    // Wall spawner
+    function spawnWall() {
+      if (isGameOver) return;
+
+      const wall = document.createElement('div');
+      wall.classList.add('wall');
+      wall.style.left = Math.floor(Math.random() * 300) + 'px';
+      game.appendChild(wall);
+
+      let wallY = -20;
+      const wallInterval = setInterval(() => {
+        if (isGameOver) {
+          clearInterval(wallInterval);
+          wall.remove();
+          return;
+        }
+
+        wallY += 5;
+        wall.style.top = wallY + 'px';
+
+        // Collision detection
+        const wallX = parseInt(wall.style.left);
+        if (
+          wallY >= 540 &&
+          wallY <= 580 &&
+          playerX + 40 > wallX &&
+          playerX < wallX + 100
+        ) {
+          endGame();
+        }
+
+        // Remove wall if off screen
+        if (wallY > 600) {
+          clearInterval(wallInterval);
+          wall.remove();
+        }
+      }, 30);
+    }
+
+    function endGame() {
+      isGameOver = true;
+      gameoverText.style.display = 'block';
+    }
+
+    // Start game loop
+    setInterval(spawnWall, 900);
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bunny Catch 🐰🥕</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: #ffeaf4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #ff70a6;
+    }
+
+    #game {
+      position: relative;
+      width: 400px;
+      height: 600px;
+      background: #fff0f5;
+      border: 5px solid #ffb3c6;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    #bunny {
+      width: 60px;
+      height: 60px;
+      background-image: url('https://i.imgur.com/3Z0eK9k.png'); /* Bunny sprite */
+      background-size: cover;
+      position: absolute;
+      bottom: 10px;
+      left: 170px;
+      transition: left 0.1s;
+    }
+
+    .carrot {
+      width: 40px;
+      height: 40px;
+      background-image: url('https://i.imgur.com/fFZ3Dpl.png'); /* Carrot sprite */
+      background-size: cover;
+      position: absolute;
+      top: -40px;
+    }
+
+    #scoreboard {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #ff69b4;
+    }
+
+    #gameover {
+      display: none;
+      font-size: 1.8em;
+      color: #ff5d8f;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐰 Bunny Catch 🥕</h1>
+  <div id="game">
+    <div id="bunny"></div>
+  </div>
+  <div id="scoreboard">Score: 0 | Misses: 0</div>
+  <div id="gameover">Game Over! Refresh to play again 💔</div>
+
+  <script>
+    const game = document.getElementById('game');
+    const bunny = document.getElementById('bunny');
+    const scoreboard = document.getElementById('scoreboard');
+    const gameoverText = document.getElementById('gameover');
+
+    let bunnyX = 170;
+    let score = 0;
+    let misses = 0;
+    let isGameOver = false;
+
+    document.addEventListener('keydown', e => {
+      if (isGameOver) return;
+      if (e.key === 'ArrowLeft' || e.key === 'a') bunnyX -= 20;
+      if (e.key === 'ArrowRight' || e.key === 'd') bunnyX += 20;
+
+      bunnyX = Math.max(0, Math.min(340, bunnyX));
+      bunny.style.left = bunnyX + 'px';
+    });
+
+    function spawnCarrot() {
+      if (isGameOver) return;
+
+      const carrot = document.createElement('div');
+      carrot.classList.add('carrot');
+      carrot.style.left = Math.floor(Math.random() * 360) + 'px';
+      game.appendChild(carrot);
+
+      let carrotY = -40;
+      const fall = setInterval(() => {
+        if (isGameOver) {
+          clearInterval(fall);
+          carrot.remove();
+          return;
+        }
+
+        carrotY += 5;
+        carrot.style.top = carrotY + 'px';
+
+        const carrotX = parseInt(carrot.style.left);
+
+        // Check for catch
+        if (
+          carrotY >= 500 &&
+          carrotY <= 560 &&
+          carrotX + 40 > bunnyX &&
+          carrotX < bunnyX + 60
+        ) {
+          score++;
+          updateScore();
+          clearInterval(fall);
+          carrot.remove();
+        }
+
+        // Missed
+        if (carrotY > 600) {
+          misses++;
+          updateScore();
+          clearInterval(fall);
+          carrot.remove();
+          if (misses >= 3) {
+            endGame();
+          }
+        }
+      }, 30);
+    }
+
+    function updateScore() {
+      scoreboard.textContent = `Score: ${score} | Misses: ${misses}`;
+    }
+
+    function endGame() {
+      isGameOver = true;
+      gameoverText.style.display = 'block';
+    }
+
+    // Start dropping carrots
+    setInterval(spawnCarrot, 1200);
+  </script>
+</body>
+</html>

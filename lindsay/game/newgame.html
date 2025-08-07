@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Catcher</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #1e1e2f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    #circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 30px;
+      transition: background 0.3s ease;
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .red { background: #e74c3c; color: white; }
+    .green { background: #2ecc71; color: white; }
+    .blue { background: #3498db; color: white; }
+    #score {
+      font-size: 18px;
+    }
+    #gameover {
+      font-size: 22px;
+      color: #ff6b6b;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎯 Color Catcher</h1>
+  <div id="circle"></div>
+  <div class="buttons">
+    <button class="red" onclick="checkColor('red')">Red</button>
+    <button class="green" onclick="checkColor('green')">Green</button>
+    <button class="blue" onclick="checkColor('blue')">Blue</button>
+    
+  </div>
+  <div id="score">Score: 0</div>
+  <div id="gameover">Game Over! Refresh to try again.</div>
+
+  <script>
+    const circle = document.getElementById('circle');
+    const scoreText = document.getElementById('score');
+    const gameOverText = document.getElementById('gameover');
+
+    const colors = ['red', 'green', 'blue'];
+    let currentColor = '';
+    let score = 0;
+    let timer;
+    let delay = 2000;
+
+    function newRound() {
+      currentColor = colors[Math.floor(Math.random() * colors.length)];
+      circle.style.background = currentColor;
+
+      timer = setTimeout(() => {
+        endGame();
+      }, delay);
+    }
+
+    function checkColor(selected) {
+      if (selected === currentColor) {
+        clearTimeout(timer);
+        score++;
+        scoreText.textContent = 'Score: ' + score;
+        delay = Math.max(600, delay - 100); // Speed up
+        newRound();
+      } else {
+        endGame();
+      }
+    }
+
+    function endGame() {
+      clearTimeout(timer);
+      gameOverText.style.display = 'block';
+      document.querySelectorAll('button').forEach(btn => btn.disabled = true);
+    }
+
+    // Start the game
+    newRound();
+  </script>
+</body>
+</html>
