@@ -1,0 +1,60 @@
+.car-list {
+    list-style: none;
+    padding-left: 0;
+}
+.car-list li::before {
+    content: "🚗 ";
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.band-list {
+    list-style: none;
+    padding-left: 0;
+}
+.band-list li::before {
+    content: "🎧 ";
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+div  {
+    width: 320px;
+    border: 2px solid #7d3c98;
+    padding: 16px;
+    margin: 18px auto;
+    background: linear-gradient(120deg, #cbb6e5 0%, #efd9f4 100%);
+    box-shadow: 0 4px 16px #b39ddb66;
+    border-radius: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    color: #4a235a;
+    transition-duration: 0.3s;
+}
+
+h1 {
+    text-align: center;
+    color: #7d3c98;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #512e67;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin-bottom: 12px;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+dt {
+    color: #7d3c98;
+    font-weight: bold;
+}
+
+dd {
+    color: #512e67;
+    margin-bottom: 10px;
+}

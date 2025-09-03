@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Beautiful List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #e0c3fc 0%, #ffffff 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(120, 60, 120, 0.08);
+            padding: 32px 24px;
+        }
+        h1 {
+            text-align: center;
+            color: #7d3c98;
+            margin-bottom: 32px;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #5e3370;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+        section {
+            margin-bottom: 32px;
+        }
+        ul, ol, dl {
+            background: #f7f0fa;
+            padding: 18px 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(120, 60, 120, 0.05);
+            max-width: 600px;
+            margin: 0 auto 18px auto;
+        }
+        ul.cars {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.cars li::before {
+            content: "🚗 ";
+            margin-right: 8px;
+        }
+        dt {
+            font-weight: bold;
+            margin-top: 15px;
+            color: #7d3c98;
+        }
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Favorites</h1>
+
+        <section>
+            <h2>Car Brands</h2>
+            <ul class="cars">
+                <li>Rolls Royce</li>
+                <li>Lamborghini</li>
+                <li>Ferrari</li>
+                <li>Bugatti</li>
+                <li>McLaren</li>
+                <li>Audi</li>
+                <li>Porsche</li>
+                <li>Koenigsegg</li>
+                <li>Aston Martin</li>
+                <li>Pagani</li>
+                <li>Mercedes Benz</li>
+                <li>Tesla</li>
+                <li>Maserati</li>
+                <li>BMW</li>
+                <li>Land Rover</li>
+                <li>Lotus</li>
+                <li>Aspark</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Best Rock Bands Of All Time</h2>
+            <ol>
+                <li>The Beatles</li>
+                <li>Queen</li>
+                <li>Black Sabbath</li>
+                <li>Led Zeppelin</li>
+                <li>Nirvana</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Song Lists</h2>
+            <dl>
+                <dt>Best Songs Of All Time</dt>
+                <dd>You Are the Right One, Genesis, The Less I Know the Better, Gypsy</dd>
+
+                <dt>Worst Songs Of All Time</dt>
+                <dd>Anxiety, Ice Ice Baby, Aqua, Beat Dat Beat</dd>
+
+                <dt>Most Favorited Songs Of All Time</dt>
+                <dd>Bohemian Rhapsody, Stairway To Heaven, Respect, Smells Like Teen Spirit</dd>
+            </dl>
+        </section>
