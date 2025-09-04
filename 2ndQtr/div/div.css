@@ -1,6 +1,61 @@
 div{
-    background-color: cornflowerblue;
-    width: 100px;
-    margin: auto;
+    background-color:lightskyblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 45%;
+    margin: 1%;
     float: left;
+    border: 2px solid black;
+    text-align: center;
+    padding: 1%;
+    box-shadow: 10px 10px 5px darkblue;
+    border-radius: 25px;
+    font-size: medium;
+    font-weight: bold;
+    color: darkblue;
+    text-shadow: 2px 2px 5px lightblue;
+    height: 25%;
+    transition: 0.5s;
+}
+.parent{
+    background-color:lightgrey;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 45%;
+    margin: 1%;
+    float: left;
+    border: 2px solid black;
+    text-align: center;
+    padding: 1%;
+    box-shadow: 10px 10px 5px grey;
+    border-radius: 25px;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 5px lightgrey;
+    height: 25%;
+    transition: 0.5s;
+}
+div:hover{
+    background-color: #D8BFD8;
+    color: black;
+    text-decoration: underline;
+    font-size: large;
+
+}
+.child{
+    background-color:lightyellow;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 45%;
+    margin: 1%;
+    float: left;
+    border: 2px solid black;
+    text-align: center;
+    padding: 1%;
+    box-shadow: 10px 10px 5px gold;
+    border-radius: 25px;
+    font-size: medium;
+    font-weight: bold;
+    color: darkgoldenrod;
+    text-shadow: 2px 2px 5px lightyellow;
+    height: 25%;
+    transition: 0.5s;
 }
