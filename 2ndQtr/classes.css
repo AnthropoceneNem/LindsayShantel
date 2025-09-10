@@ -12,7 +12,6 @@
     color: darkblue;
     text-shadow: 2px 2px 5px lightblue;
     height: 25%;
-
 }
 .header {
     background-color:lightgrey;
@@ -121,4 +120,48 @@
     color: darkgreen;
     text-shadow: 2px 2px 5px lightgreen;
     height: 25%;
+
+}
+.sub-contentz#box1 {
+    background: rgb(52, 71, 52);
+    border-radius: 8px;
+    min-height: 40px;
+    margin: 8px 0;
+}
+
+.sub-contentz#box2 {
+    background: #336b48;
+    border-radius: 8px;
+    min-height: 40px;
+    margin: 8px 0;
+}
+
+.sub-contentz#box3 {
+    background: #12852e;
+    border-radius: 8px;
+    min-height: 40px;
+    margin: 8px 0;
+}
+
+.sub-contentz#box4 {
+    background: #14883b;
+    border-radius: 8px;
+    min-height: 40px;
+    margin: 8px 0;
+}
+
+.sub-contentz#box5 {
+    background: #56b66e;
+    border-radius: 8px;
+    min-height: 40px;
+    margin: 8px 0;
+    color: #fff;
+}
+
+.sub-contentz#box6 {
+    background: #90e0a3;
+    border-radius: 8px;
+    min-height: 40px;
+    margin: 8px 0;
+    color: #000;
 }
