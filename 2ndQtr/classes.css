@@ -98,27 +98,27 @@
     border: 2px solid black;
     text-align: center;
     padding: 1%;
-    box-shadow: 10px 10px 5px gold;
+    box-shadow: 10px 10px 5px rgb(196, 178, 17);
     border-radius: 25px;
     font-size: medium;
     font-weight: bold;
-    color: darkgoldenrod;
+    color: rgb(184, 144, 11);
     text-shadow: 2px 2px 5px lightyellow;
     height: 25%;
 }
 .sub-contentz {
-    background-color:lightgreen;
+    background-color:rgb(224, 255, 242);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 1%;
     border: 2px solid black;
     text-align: center;
     padding: 1%;
-    box-shadow: 10px 10px 5px green;
+    box-shadow: 10px 10px 5px rgb(14, 202, 108);
     border-radius: 25px;
     font-size: medium;
     font-weight: bold;
-    color: darkgreen;
-    text-shadow: 2px 2px 5px lightgreen;
+    color: rgb(11, 184, 25);
+    text-shadow: 2px 2px 5px lightyellow;
     height: 25%;
 
 }
