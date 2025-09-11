@@ -60,21 +60,7 @@
     text-shadow: 2px 2px 5px lightgreen;
     height: 25%;
 }
-.sub-content {
-     background-color:lightskyblue;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 1%;
-    border: 2px solid black;
-    text-align: center;
-    padding: 1%;
-    box-shadow: 10px 10px 5px darkblue;
-    border-radius: 25px;
-    font-size: medium;
-    font-weight: bold;
-    color: darkblue;
-    text-shadow: 2px 2px 5px lightblue;
-    height: 25%;
-}
+
 .sub-constent {
      background-color:lightgrey;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -89,7 +75,6 @@
     color: black;
     text-shadow: 2px 2px 5px lightgrey;
     height: 25%;
-
 }
 .sub-contento {
     background-color:lightyellow;
