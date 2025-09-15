@@ -13,24 +13,55 @@
 .article {
     background-color: white;
     width: 80%;
-    height: 100%;
-    margin-left: 7%;
+    height: 20%;
+    margin-left: 10%;
     border-radius: 15px;
     box-shadow: 10px 10px 5px yellow;
     margin: 5%;
     float: left;
-    margin-top: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
 
 }
-.sub-content {
+.sub-content1 {
     float: left;
-    width: 25%;
+    width: 20%;
     background-color: powderblue;
-    box-shadow: 10px 10px 5px blue;
+    box-shadow: 1px 5px 5px 5px blue;
     text-align: center;
     border-radius: 30px;
     margin: 5px;
     height: 50px;
-    margin-left: 5%;
+    margin-left: 6%;
+    font-size: medium;
 
+}
+.sub-content2 {
+    float: left;
+    width: 20%;
+    background-color: powderblue;
+    box-shadow: 1px 5px 5px 5px blue;
+    text-align: center;
+    border-radius: 30px;
+    margin: 5px;
+    height: 50px;
+    margin-left: 1%;
+
+}
+.sub-content3 {
+    float: left;
+    width: 20%;
+    background-color: powderblue;
+    box-shadow: 1px 5px 5px 5px blue;
+    text-align: center;
+    border-radius: 30px;
+    margin: 5px;
+    height: 50px;
+    margin-left: 1%;
+
+}
+
+
+.box {
+    border: 3px solid rgb(10, 54, 175);
 }
