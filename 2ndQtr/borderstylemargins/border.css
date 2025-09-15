@@ -1,0 +1,74 @@
+.container {
+    background-color: powderblue;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(10, 95, 110);
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 20px;
+    float: left;
+    width: 92%;
+}
+.dotted {
+    border-style: dotted;
+}
+.dashed {
+    border-style: dashed;
+}
+.solid {
+    border-style: solid;
+}
+.double {
+    border-style: double;
+}
+.groove {
+    border-style: groove;
+}
+.ridge {
+    border-style: ridge;
+}
+.inset {
+    border-style: inset;
+}
+.outset {
+    border-style: outset;
+}
+.none {
+    border-style: none;
+}
+.container2 {
+    background-color: powderblue;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(10, 95, 110);
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 20px;
+    float: left;
+    width: 92%;
+}
+.solid-2px {
+    border-width: 2px;
+    border-style: solid;
+}
+.groove-15px {
+    border-width: 15px;
+    border-style: groove;
+}
+.ridge-35px {
+    border-width: 35px;
+    border-style: ridge;
+}
+.thin {
+    border-width: thin;
+    border-style: ridge;
+}
+.medium {
+    border-width: medium;
+    border-style: inset;
+}
+.thick {
+    border-width: thick;
+    border-style: outset;
+}
+
