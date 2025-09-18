@@ -1,0 +1,114 @@
+.container {
+    border: 2px solid violet;
+    margin: auto;
+    width: 95%;
+    height: 200px;
+    box-shadow: 10px 10px 5px plum;
+    border-radius: 10px;
+    background-color: lavender;
+    text-shadow: 10px;
+    
+    
+
+
+}
+.pd10 {
+   padding-left: 10px;
+   margin: 10px;
+   float: left;
+   width: 100px;
+   border-radius: 30px;
+   border: 2px solid violet;
+}
+.pd15 {
+   padding-right: 15px;
+   margin: 10px;
+   float: left;
+   width: 100px;
+   border-radius: 30px;
+   border: 2px solid violet;
+}
+.pd25 {
+   padding-top: 25px;
+   margin: 10px;
+   float: left;
+   width: 100px;
+   border-radius: 30px;
+   border: 2px solid violet;
+}
+.pdbottom {
+   padding-bottom: 35px;
+   margin: 10px;
+   float: left;
+   width: 100px;
+   border-radius: 30px;
+   border: 2px solid violet;
+}
+.container2 {
+     border: 2px solid violet;
+    margin: auto;
+    width: 95%;
+    height: 200px;
+    box-shadow: 10px 10px 5px plum;
+    border-radius: 10px;
+    background-color: lavender;
+    text-shadow: 10px;
+}
+.pdtopright {
+    padding-top: 10px;
+    padding-right: 10px;
+    float: left;
+    width: 100px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid violet;
+
+}
+.pdrightbottom {
+    padding-right: 15px;
+    padding-bottom: 15px;
+    float: left;
+    width: 100px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid violet;
+}
+.pdleftbottom {
+    padding-left: 25px;
+    padding-bottom: 25px;
+    float: left;
+    width: 100px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid violet;
+}
+.pdtopleft {
+    padding-top: 30px;
+    padding-left: 30px;
+    float: left;
+    width: 100px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid violet;
+}
+.container3 {
+      border: 2px solid violet;
+    margin: auto;
+    width: 95%;
+    height: 200px;
+    box-shadow: 10px 10px 5px plum;
+    border-radius: 10px;
+    background-color: lavender;
+    text-shadow: 10px;
+}
+.allsidepadding {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    float: left;
+    width: 100px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid violet;   
+}
