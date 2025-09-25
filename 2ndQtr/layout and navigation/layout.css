@@ -1,0 +1,68 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Style the header */
+header {
+    background-color: rgb(72, 156, 110);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+
+}
+nav{
+    float: left;
+    width: 30%;
+    height: 300px;
+    background: darkseagreen;
+
+}
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: darkseagreen;
+}
+nav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+article {
+  float: left;
+  padding: 43px;
+  width: 65%;
+  background-color: gainsboro;
+  height: 214px; /* only for demonstration, should be removed */
+}
+footer {
+     background-color: rgb(72, 156, 110);
+  padding: 10px;
+  text-align: center;
+  color: black;
+  }
+
+
+ li a:hover {
+  background-color: darkseagreen;
+  color: rgb(72, 156, 110);
+ }
+ul li a:hover:not(.active) {
+  background-color: black;
+}
+ul li a.active {
+  background-color: rgb(72, 156, 110);
+  color: black;
+}
+
+@media (max-width: 600px) {
+nav, article {
+width: 100%;
+height: auto;
+}
+}

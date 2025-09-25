@@ -6,9 +6,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 40px);
     grid-template-rows: repeat(3, 40px);
-    background: white;
+    background: aliceblue;
     margin-left: 165px;
-    background-color: white;
+    background-color: burlywood;
 }
 edrt
 /* Each small box */
@@ -18,7 +18,7 @@ edrt
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
+    background-color: yellow;
 }
 
 /* Margin demo */
