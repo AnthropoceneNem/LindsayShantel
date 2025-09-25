@@ -36,7 +36,7 @@ nav li a {
 article {
   float: left;
   padding: 43px;
-  width: 65%;
+  width: 66%;
   background-color: gainsboro;
   height: 214px; /* only for demonstration, should be removed */
 }
@@ -58,6 +58,9 @@ ul li a:hover:not(.active) {
 ul li a.active {
   background-color: rgb(72, 156, 110);
   color: black;
+}
+section {
+  background-color: black;
 }
 
 @media (max-width: 600px) {
