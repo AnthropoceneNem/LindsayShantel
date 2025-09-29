@@ -1,36 +1,43 @@
-body {
-    display: flex;
-}
-/* Big box = grid wrapper */
-.big-box {
-    display: grid;
-    grid-template-columns: repeat(3, 40px);
-    grid-template-rows: repeat(3, 40px);
-    background: aliceblue;
-    margin-left: 165px;
-    background-color: burlywood;
-}
-edrt
-/* Each small box */
-.small-box {
-    border: 1px solid black;
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow;
+.margin {
+ 
+ display: inline-grid;
+ grid-template-columns: auto auto auto;
+ background-color: white;
+ border: 1px solid #56021F;
+ margin-left: 63px;
+ margin-top: 25px;
+
+ 
 }
 
-/* Margin demo */
-#left {
-    margin-left: 5px;
+.marginleft {
+   
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  background-color: #FF9A9A;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #56021F;
+  height: 45px;
+  width: 55px;
 }
-#right {
-    margin-right: 5px;
+.left {
+  margin-left: 5px;
+  border: 1px solid #56021F;
+  background-color: #FF9A9A;
+}
+.right {
+  margin-right: 5px;
+  border: 1px solid #56021F;
+  background-color: #FF9A9A;
 }
 .top {
-    margin-top: 5px;
+  margin-top: 5px;
+  border: 1px solid #56021F;
+  background-color: #FF9A9A;
 }
-#bottom {
-    margin-bottom: 5px;
+.bottom {
+  margin-bottom: 5px;
+  border: 1px solid #56021F;
+  background-color: #FF9A9A;
 }
