@@ -1,0 +1,103 @@
+/* General body style */
+body {
+  background: linear-gradient(120deg, #7d3c98 0%, #cbb6e5 100%);
+  padding: 20px;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+               'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 120x;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Layout with nav + article */
+section {
+  display: flex;
+  gap: 20px;
+}
+
+/* Sidebar nav */
+nav {
+  width: 220px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  height: 30px;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4a148c;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #7d3c98;
+  text-decoration: underline;
+}
+
+/* Article content */
+article {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Reusable child2 (image + text card style) */
+.parent2 {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  min-height: 100vh;       
+}
+
+.child2 {
+  display: flex;
+  align-items: center;     
+  gap: 20px;               
+  background: white;       
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 2px solid black;
+}
+
+.child2 img {
+  border-radius: 50%;  
+  border: 2px solid black;
+}
+
+.child2 .header {
+  margin: 5px 0;  
+}

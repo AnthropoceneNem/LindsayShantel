@@ -8,12 +8,11 @@ header {
     border-radius: 16px 16px 0 0;
     box-shadow: 0 2px 12px #7d3c9855;
 }
-
 /* Navigation */
 nav {
     float: left;
     width: 30%;
-    height: 300px;
+    height: 20PXpx;
     background: #b39ddb;
     border-radius: 0 0 0 16px;
     box-shadow: 0 2px 8px #7d3c9833;
@@ -35,14 +34,14 @@ nav li a {
 }
 li a:hover {
     background-color: #7d3c98;
-    color: #fff;
+    color: ;
 }
 ul li a:hover:not(.active) {
     background-color: #512e67;
     color: #f7f0fa;
 }
 ul li a.active {
-    background-color: #cbb6e5;
+    background-color: #512e67;
     color: #7d3c98;
 }
 
@@ -55,7 +54,8 @@ article {
     color: #512e67;
     border-radius: 0 0 16px 0;
     box-shadow: 0 2px 8px #7d3c9833;
-    min-height: 214px;
+    min-height: 220px;
+    height: auto;
 }
 
 /* Footer */

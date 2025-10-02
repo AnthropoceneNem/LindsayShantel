@@ -65,13 +65,13 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #cbb6e5 0%, #7d3c98 100%);
+    background: linear-gradient(120deg, #cbb6e5 100%, #cbb6e5 100%);
     padding: 30px;
     text-align: center;
     font-size: 35px;
     color: #fff;
     border-radius: 16px 16px 0 0;
-    box-shadow: 0 2px 12px #7d3c9855;
+    box-shadow: 0 2px 12px #b39ddb;
 }
 
 /* Navigation */
