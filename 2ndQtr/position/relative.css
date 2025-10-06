@@ -1,0 +1,115 @@
+#header {
+    top: 0px;
+    left: 0px;
+    border: solid gainsboro 2px;
+    position: fixed;
+    background-color: green;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+    top: 0px;
+    left: 0px
+}
+#container {
+    height: 200px;
+    width: 200px;
+    border: solid black 2px;
+    position: relative;
+    left: 30px;
+    top: 50px;
+}
+#content{
+    height: 200px;
+    height: 200px;
+    border: solid red 2px;
+    position: relative;
+    right: 30px;
+    bottom: 50px;
+    left: 46px;
+    top: 50px;
+}
+#container1 {
+    height: 200px;
+    width: 200px;
+    border: solid black 2px;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    right: 50px;
+}
+#content1{
+    height: 200px;
+    height: 200px;
+    border: solid red 2px;
+    position: relative;
+    right: 30px;
+    bottom: 50px;
+    left: 46px;
+    top: 90px;
+}
+#container2 {
+    height: 200px;
+    width: 200px;
+    border: solid black 2px;
+    position: relative;
+    left: 90px;
+    top: 50px;
+    top: 90px;
+}
+#content2{
+    height: 200px;
+    height: 200px;
+    border: solid red 2px;
+    position: relative;
+    right: 30px;
+    bottom: 50px;
+    left: 90px;
+    top: 90px;
+}
+#footer {
+    bottom: 0px;
+    left: 0px;
+    border: solid gainsboro 2px;
+    position: fixed;
+    background-color: green;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+}
+#ads {
+    right: 0px;
+    bottom: 30px;
+    border: solid gainsboro 2px;
+    position: fixed;
+    background-color: green;
+    height: 200px;
+    width: 100px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+}
+#stickyheader {
+    height: 30px;
+    width: 100%;
+    background-color: palegoldenrod;
+    position: sticky;
+    top: 50px;
+    left: -5px;
+}
+#content4{
+   height: 95px;
+   width: 100px;
+   border: solid red 2px;
+   position: absolute;
+   border-radius: 30px;
+}
+#container4 {
+    height: 200px;
+    width: 200px;
+    border: solid rebeccapurple 2px;
+    position: absolute;
+    left: 90px;
+    top: 50px;
+    top: 90px;
+}
