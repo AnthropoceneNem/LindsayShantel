@@ -141,6 +141,11 @@ section {
     color: #f7f0fa;
     margin-bottom: 18px;
 }
+article{
+    width: auto;
+    border: black 2px solid;
+    
+}
 
 /* Responsive */
 @media (max-width: 768px) {
