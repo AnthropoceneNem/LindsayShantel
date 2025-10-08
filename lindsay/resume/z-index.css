@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.box1 {
+    background-color: pink;
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+}
+.box2 {
+    background-color: lightblue;
+    top: 150px;
+    left: 150px;
+    z-index: 3;
+}
+.box3 {
+    background-color: lightgreen;
+    top: 200px;
+    left: 200px;
+    z-index: 2;
+}
+.container {
+   position: absolute;
+   transform: translate(-50%, -50%);
+   left: 50%;
+   width: 500px;
+
+}
+.box:hover {
+    
+    cursor: pointer;
+    z-index: 4;
+}
