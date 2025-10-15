@@ -1,27 +1,30 @@
-/* Header */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style the header */
 header {
-    background: linear-gradient(90deg, #cbb6e5 0%, #7d3c98 100%);
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-    color: #fff;
-    border-radius: 16px 16px 0 0;
-    box-shadow: 0 2px 12px #7d3c9855;
+  background: linear-gradient(90deg, #cbb6e5 0%, #7d3c98 100%);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #fff;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 2px 12px #7d3c9855;
 }
-/* Navigation */
+
+/* Create two columns/boxes that floats next to each other */
 nav {
-    float: left;
-    width: 30%;
-    height: 20PXpx;
-    background: #b39ddb;
-    border-radius: 0 0 0 16px;
-    box-shadow: 0 2px 8px #7d3c9833;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background: transparent;
+  float: left;
+  width: 20%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #b39ddb;
+  border-radius: 0 0 0 16px;
+  
 }
 nav li a {
     display: block;
@@ -31,6 +34,36 @@ nav li a {
     text-decoration: none;
     border-radius: 8px;
     transition: background 0.2s, color 0.2s;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+}
+
+article {
+  float: left;
+  padding: 43px;
+  width: 80%;
+  background-color: #EBD6FB;
+  background: #f7f0fa;
+  border-radius: 0 0 16px 0;
+  box-shadow: 0 2px 8px #7d3c9833;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Style the footer */
+footer {
+  background: linear-gradient(90deg, #cbb6e5 0%, #7d3c98 100%);
+  padding: 10px;
+  text-align: center;
+  color: white;
+  
+  box-shadow: 0 -2px 12px #7d3c9855;
 }
 li a:hover {
     background-color: #7d3c98;
@@ -45,63 +78,32 @@ ul li a.active {
     color: #7d3c98;
 }
 
-/* Article */
-article {
-    float: left;
-    padding: 43px;
-    width: 66%;
-    background: #f7f0fa;
-    color: #512e67;
-    border-radius: 0 0 16px 0;
-    box-shadow: 0 2px 8px #7d3c9833;
-    min-height: 220px;
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
     height: auto;
+  }
 }
 
-/* Footer */
-footer {
-    background: linear-gradient(90deg, #cbb6e5 0%, #7d3c98 100%);
-    padding: 10px;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 -2px 12px #7d3c9855;
+nav li a {
+  display: block;
+  color: black; 
+  padding: 8px 16px;
+  text-decoration: none;
 }
 
-/* Section */
+/* Change the link and background color on hover */
+
+ul li a:hover:not(.active) {
+  background-color: #E9B3FB;
+}
+
+ul li a.active {
+  background-color: #5D2F77;
+  color: white;
+}
+
 section {
-    background: #512e67;
-    border-radius: 12px;
-    padding: 12px;
-    color: #f7f0fa;
-    margin-bottom: 18px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav, article {
-        width: 100%;
-        height: auto;
-        float: none;
-        border-radius: 0;
-        box-shadow: none;
-    }
-    header, footer {
-        font-size: 24px;
-        padding: 16px;
-        border-radius: 0;
-        box-shadow: none;
-    }
-    article {
-        padding: 18px;
-        min-height: 120px;
-    }
-    nav {
-        padding: 12px 0;
-        min-height: 120px;
-    }
-    section {
-        padding: 8px;
-        font-size: 1em;
-    }
+  overflow: auto;
+  
 }
