@@ -1,45 +1,97 @@
-body{
-    font-family: Arial, sans-serif;
-    margin-top: 50px;
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #EBD3F8, #D0A2F7, #E3DFFD);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
-.box{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    color: black;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-}
-.box1 {
-    background-color: pink;
-    top: 100px;
-    left: 100px;
-    z-index: 1;
-}
-.box2 {
-    background-color: lightblue;
-    top: 150px;
-    left: 150px;
-    z-index: 3;
-}
-.box3 {
-    background-color: lightgreen;
-    top: 200px;
-    left: 200px;
-    z-index: 2;
-}
-.container {
-   position: absolute;
-   transform: translate(-50%, -50%);
-   left: 50%;
-   width: 500px;
 
+h2 {
+  color: #4B2C91;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
+
+.container {
+  position: relative;
+  width: 550px;
+  height: 450px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+  transition: 0.3s ease;
+}
+
+/* Positions and Layers */
+.box1 {
+  top: 60px;
+  left: 60px;
+  z-index: 1;
+  transform: rotate(-6deg);
+}
+
+.box2 {
+  top: 100px;
+  left: 110px;
+  z-index: 3;
+  transform: rotate(2deg);
+}
+
+.box3 {
+  top: 140px;
+  left: 160px;
+  z-index: 2;
+  transform: rotate(5deg);
+}
+
+.box4 {
+  top: 180px;
+  left: 210px;
+  z-index: 4;
+  transform: rotate(-3deg);
+}
+
+.box5 {
+  top: 220px;
+  left: 260px;
+  z-index: 5;
+  transform: rotate(4deg);
+}
+
+/* Hover Effects */
 .box:hover {
-    
-    cursor: pointer;
-    z-index: 4;
+  z-index: 10;
+  transform: scale(1.15) rotate(0deg);
+  cursor: pointer;
+}
+
+.box:hover img {
+  filter: brightness(100%) contrast(110%);
+}
+
+footer {
+  margin-top: 40px;
+  color: #6A4EA1;
+  font-size: 14px;
+  text-align: center;
 }
