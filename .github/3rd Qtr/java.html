@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dodge the Blocks 🧱</title>
+<style>
+  body {
+    margin: 0;
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  canvas {
+    background: #222;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #fff;
+  }
+
+  h1 {
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <h1>Dodge the Blocks 🧱</h1>
+  <canvas id="gameCanvas" width="400" height="500"></canvas>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+
+    let player = { x: 180, y: 450, width: 40, height: 40, speed: 6 };
+    let blocks = [];
+    let score = 0;
+    let gameOver = false;
+
+    document.addEventListener('keydown', movePlayer);
+
+    function movePlayer(e) {
+      if (e.key === 'ArrowLeft' && player.x > 0) player.x -= player.speed;
+      if (e.key === 'ArrowRight' && player.x < canvas.width - player.width)
+        player.x += player.speed;
+    }
+
+    function createBlock() {
+      let size = Math.random() * 30 + 20;
+      let x = Math.random() * (canvas.width - size);
+      blocks.push({ x: x, y: -size, width: size, height: size, speed: 3 + Math.random() * 2 });
+    }
+
+    function update() {
+      if (gameOver) return;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw player
+      ctx.fillStyle = 'cyan';
+      ctx.fillRect(player.x, player.y, player.width, player.height);
+
+      // Update and draw blocks
+      ctx.fillStyle = 'red';
+      for (let i = 0; i < blocks.length; i++) {
+        let b = blocks[i];
+        b.y += b.speed;
+        ctx.fillRect(b.x, b.y, b.width, b.height);
+
+        // Collision
+        if (
+          player.x < b.x + b.width &&
+          player.x + player.width > b.x &&
+          player.y < b.y + b.height &&
+          player.y + player.height > b.y
+        ) {
+          gameOver = true;
+          alert("💀 Game Over! Final Score: " + score);
+          document.location.reload();
+        }
+      }
+
+      // Remove old blocks
+      blocks = blocks.filter(b => b.y < canvas.height);
+
+      // Draw score
+      ctx.fillStyle = 'white';
+      ctx.font = '18px Arial';
+      ctx.fillText('Score: ' + score, 10, 20);
+
+      score++;
+      requestAnimationFrame(update);
+    }
+
+    // Spawn blocks every 800ms
+    setInterval(createBlock, 800);
+
+    update();
+  </script>
+</body>
+</html>
