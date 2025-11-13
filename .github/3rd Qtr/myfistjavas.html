@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Java Script</title>
-    <script src="javascript.js"></script>
-    <script>
-        document.getElementById("jshead").innerHTML = 
-        "This is my first javascript code!";
-        window.alert("Welcome to my first JavaScript page!");   
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First JavaScript</title>
+  <script>
+    // Functions in the head section
+    function changep1() {
+      document.getElementById("p1").innerHTML = "You clicked the button!";
+    }
 
+    function changep2() {
+      document.getElementById("p2").innerHTML = "You clicked the button!";
+    }
+
+    function alert1() {
+      alert("Welcome 1 to my first JavaScript page!");
+    }
+
+    function alert2() {
+      alert("Welcome 2 to my first JavaScript page!");
+    }
+
+    function alert3() {
+      alert("Welcome 3 to my first JavaScript page!");
+    }
+  </script>
 </head>
 <body>
-    <h1>My First Javascript</h1>
-    <h3>The next element is a result of a javascript on located on the head.</h3>
-    <p id="jshead"></p>
-    <p id="jsbody">hala ka</p>
-    <script>
-        document.getElementById("jshead").innerHTML = 
-        "This is my first javascript code!";
-         window.alert("Welcome to my first JavaScript page!");   
-    </script>
-    
+  <h1>My First JavaScript</h1>
+  <h4>The next element is a result of a JavaScript function located in the head.</h4>
+
+  <p id="p1">Click the button!</p>
+  <button type="button" onclick="changep1()">Click for button wah!</button>
+
+  <hr>
+
+  <p id="p2">Click for button!</p>
+  <button type="button" onclick="changep2()">Click for button wah 2!</button>
+
+  <hr>
+
+  <h4>This is alert 1, 2, & 3!</h4>
+  <button type="button" onclick="alert1()">Click for an alert 1!</button>
+  <button type="button" onclick="alert2()">Click for an alert 2!</button>
+  <button type="button" onclick="alert3()">Click for an alert 3!</button>
 </body>
 </html>
+ 
