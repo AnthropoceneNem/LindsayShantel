@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Loops in JavaScript - Multiplication Table</title>
     <link rel="stylesheet" href="loop.css">
 </head>
 <body>
-    <h1>Showcasing Loops in JavaScript</h1>
-    <p>This page demonstrates simple loops using JavaScript's <code>for loop</code>, <code>while</code>, and <code>do while</code>.</p>
+    <h1>Loops in JavaScript</h1>
+    <p>This example demonstrates a <code>for loop</code> to create a multiplication table for a number you enter.</p>
+    
     <section class="example">
-        <h2>Example 1 — for loops </h2>
-        <p>Enter any number and click <strong>count</strong>. The script uses an <code>for loop</code> to count from 1 to the number that you has given</p>
-        <label for="numInput">Count up to:</label>
-        <input id="numInput" type="number" min="1" placeholder="Please enter you number here!" />
-        <button id="count">Count</button>
-        <button id="clearCount">Clear</button>
-        <p class="result" id="countResult" aria-live="polite"></p>
+        <h2>Multiplication Table</h2>
+        <p>Enter a number and click <strong>Generate Table</strong>. The script uses a <code>for loop</code> to create the multiplication table for that number (up to 12).</p>
+        
+        <label for="numInput3">Number:</label>
+        <input id="numInput3" type="number" min="1" max="20" placeholder="Enter a number (1-20)" />
+        <button id="generateTable">Generate Table</button>
+        <button id="clearTable">Clear</button>
+        
+        <div class="result" id="tableResult" aria-live="polite"></div>
     </section>
+
     <script src="loop.js"></script>
 </body>
 </html>
