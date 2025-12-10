@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calcu.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Simple Calculator</h2>
+
+    <label for="num1">First Number:</label>
+    <input id="num1" type="number">
+
+    <label for="num2">Second Number:</label>
+    <input id="num2" type="number">
+
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide()">/</button>
+
+    <p id="result">Result:</p>
+</div>
+
+<script>
+    function getNumbers() {
+        const n1 = Number(document.getElementById("num1").value);
+        const n2 = Number(document.getElementById("num2").value);
+
+        if (isNaN(n1) || isNaN(n2)) {
+            document.getElementById("result").textContent = "Result: Please enter valid numbers.";
+            return null;
+        }
+        return { n1, n2 };
+    }
+
+    function add() {
+        const nums = getNumbers();
+        if (!nums) return;
+        document.getElementById("result").textContent = "Result: " + (nums.n1 + nums.n2);
+    }
+
+    function subtract() {
+        const nums = getNumbers();
+        if (!nums) return;
+        document.getElementById("result").textContent = "Result: " + (nums.n1 - nums.n2);
+    }
+
+    function multiply() {
+        const nums = getNumbers();
+        if (!nums) return;
+        document.getElementById("result").textContent = "Result: " + (nums.n1 * nums.n2);
+    }
+
+    function divide() {
+        const nums = getNumbers();
+        if (!nums) return;
+
+        if (nums.n2 === 0) {
+            document.getElementById("result").textContent = "Result: Cannot divide by zero!";
+            return;
+        }
+
+        document.getElementById("result").textContent = "Result: " + (nums.n1 / nums.n2);
+    }
+</script>
+
+</body>
+</html>
