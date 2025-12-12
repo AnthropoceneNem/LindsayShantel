@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in Javascript</title>
+</head>
+<body>
+    <p id="test"></p>
+    <p id="para"></p>
+    <hr>
+    <p id="add"></p>
+    <script>
+        function myFirstFunction() {
+            console.log("Hello World!");
+        }
+        myFirstFunction();
+        function messageFunction() {
+        console.log("This is my message.");
+        }
+        messageFunction();
+        myFunction = (a, b) => a+b;
+        let testp = document.getElementById("test");
+        testp.innerHTML = messageFunction();
+        testp.innerHTML = myFunction(5, 10);
+
+        printMessage = () => `text`;
+        testp.textContent = printMessage();
+
+        alert(printMessage());
+        let carName = "BMW";
+
+        function localVariable (){
+            let carName = "Volvo";
+            myCar = "Toyota";
+
+        }
+        buyCar();
+        testp.textContent = myCar;
+
+        myParameter = (parameter1, parameter2) => parameter1 + parameter2;
+
+        let para = document.getElementById("para");
+        para.textContent = myParameter(10, 20);
+        addition= (add1, add2) => {
+            return add1 + add2;
+        }   
+
+        alert(carName); // This will cause an error because carName is not defined outside the function
+    </script>
+</body>
+</html>

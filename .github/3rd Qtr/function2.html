@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function 2 in JavaScript</title>
+</head>
+<body>
+<div>
+    <label for="add1">First Number</label>
+    <input id="add1" type = "number" placeholder = "Enter your number here!">
+    <label for="add1">First Number</label>
+    <input id="add1" type = "number" placeholder = "Enter your number here!">
+
+</div>
+    <h1>My Calculator</h1>
+    <h4>Addition</h4>
+    <p id="add"></p>
+    <hr>
+    <h4>Subtraction</h4>
+    <p id="sub"></p>
+    <hr>
+    <h4>Multiplication</h4>
+    <p id="mul"></p>
+    <hr>
+    <h4>Division</h4>
+    <p id="div"></p>
+    <hr>
+    <script>
+        addition = (a, b) => {
+            return a + b;
+        }
+        subtraction = (a, b) => {
+            return a - b;
+        }
+        multiplication = (a, b) => {
+            return a * b;
+        }
+        division = (a, b) => {
+            if (b === 0) {
+                return "Error: Division by zero";
+            }
+            return a / b;
+        }
+
+        let addP = document.getElementById("add");
+        addP.textContent = `5 + 3 = ${addition(5, 3)}`;
+
+        let subP = document.getElementById("sub");
+        subP.textContent = `5 - 3 = ${subtraction(5, 3)}`;
+
+        let mulP = document.getElementById("mul");
+        mulP.textContent = `5 * 3 = ${multiplication(5, 3)}`;
+
+        let divP = document.getElementById("div");
+        divP.textContent = `5 / 0 = ${division(5, 0)}`;
+        </script>
+</body>
+</html>
