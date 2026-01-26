@@ -67,7 +67,7 @@ footer {
 }
 li a:hover {
     background-color: #7d3c98;
-    color: ;
+    color: #f7f0fa;
 }
 ul li a:hover:not(.active) {
     background-color: #512e67;
@@ -87,13 +87,12 @@ ul li a.active {
 
 nav li a {
   display: block;
-  color: black; 
+  color: #512e67; 
   padding: 8px 16px;
   text-decoration: none;
 }
 
 /* Change the link and background color on hover */
-
 ul li a:hover:not(.active) {
   background-color: #E9B3FB;
 }
